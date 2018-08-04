@@ -12,17 +12,6 @@ import (
 var wg sync.WaitGroup
 var client http.Client
 
-// type Location struct {
-// 	Loc string `xml:"loc"`
-// }
-  
-// // Why doesnt this work
-// func (l Location) String() string {
-// 	fmt.Sprintf(l.Loc)
-// 	httpsFix := l.Loc[:4] + "s" + l.Loc[4:]
-// 	return httpsFix
-// }
-
 type NewsMap struct {
 	Keyword string
 	Location string
@@ -76,7 +65,7 @@ func newsHandler(w http.ResponseWriter, r *http.Request) {
 
 	bytes, _ := ioutil.ReadAll(res.Body)
 	xml.Unmarshal(bytes, &s)
-	news_map := make(map[string]NewsMap) // key is string and values are NewsMap values
+	news_map := make(map[string]NewsMap)
 	res.Body.Close()
 	queue := make(chan News, 30)
 
