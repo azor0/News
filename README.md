@@ -3,7 +3,7 @@
 
 go run main.go
 
-Page loading with linear requests and concurrent:
+Page loading with linear and concurrent requests:
 
 
 ![Concurrency](https://github.com/azor0/News/blob/master/assets/Concurrent.png)
