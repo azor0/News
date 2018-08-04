@@ -3,6 +3,7 @@
 
 go run main.go
 
+Page loading with linear and concurrent requests:
 
 Page loading with linear requests and concurrent:
 
